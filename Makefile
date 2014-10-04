@@ -1,4 +1,4 @@
-NAME=ffm
+NAME=pop_can_tracking
 INCLUDES=-I. -I/usr/include/ffmpeg
 LDFLAGS=-lswscale -lavutil -lavformat -lavcodec -lz -lm
 BUILD=$(NAME).o save.o funcs.o
@@ -8,7 +8,7 @@ CFLAGS=-Wall -g -pipe
 	gcc $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
 test: $(BUILD)
-	gcc $(BUILD) -o $(NAME) $(LDFLAGS)
+	gcc $(BUILD) -o "$(NAME)" $(LDFLAGS)
 
 s:
 	scite Makefile *.h  *.c&
